@@ -11,6 +11,12 @@ module.exports = app => {
     return context.github.issues.createComment(issueComment)
   })
 
+  app.on('pull_request.opened', async context => {
+    const bruh = context.issue({ body: 'https://www.youtube.com/watch?v=2ZIpFytCSVc' })
+    return context.github.pull_request.createComment(bruh)
+  })
+
+
   // For more information on building apps:
   // https://probot.github.io/docs/
 
