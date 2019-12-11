@@ -10,7 +10,7 @@ module.exports = app => {
 
   app.on('pull_request.opened', async context => {
     const bruh = context.issue({ body: 'test1' })
-    return context.github.issue.createComment(bruh)
+    return context.github.issues.createComment(bruh)
     //return context.github.pull_request.createComment(bruh)
   })
 
