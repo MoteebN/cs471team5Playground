@@ -12,46 +12,9 @@ module.exports = app => {
   })
 
   app.on('pull_request.opened', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
+    const bruh = context.issue({ body: 'test1' })
+    return context.github.issue.createComment(bruh)
     //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-
-  app.on('pull_request.assigned', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-
-  app.on('pull_request.closed', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-  app.on('pull_request.edited', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-  app.on('pull_request.labeled', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-  app.on('pull_request.reopened', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-  app.on('pull_request.review_request_removed', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
-  })
-  app.on('pull_request.synchronize', async context => {
-    const bruh = context.pull_request({ body: 'test1' })
-    //return context.github.pull_request.createComment(bruh)
-    return context.github.pull_request.createComment(bruh)
   })
 
   // For more information on building apps:
