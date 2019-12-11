@@ -12,7 +12,7 @@ module.exports = app => {
   })
 
   app.on('pull_request.opened', async context => {
-    const bruh = context.issue({ body: 'https://www.youtube.com/watch?v=2ZIpFytCSVc' })
+    const bruh = context.pull_request({ body: 'https://www.youtube.com/watch?v=2ZIpFytCSVc' })
     return context.github.pull_request.createComment(bruh)
   })
 
