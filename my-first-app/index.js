@@ -6,14 +6,11 @@ module.exports = app => {
   // Your code here
   app.log('Yay, the app was loaded!')
 
-  app.on('issues.opened', async context => {
-    const issueComment = context.issue({ body: 'Thanks for yeehawing uiko!' })
-    return context.github.issues.createComment(issueComment)
-  })
+  
 
   app.on('pull_request.opened', async context => {
     const bruh = context.issue({ body: 'test1' })
-    return context.github.issue.createComment(bruh)
+    return context.github.issues.createComment(bruh)
     //return context.github.pull_request.createComment(bruh)
   })
 
